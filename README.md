@@ -1,6 +1,9 @@
 # Starter Blog built with Next.js, Tailwind and Markdown
 Features:
-- Static site generation, search, tags, client-side routing  
+- Static site generation, search, tags, client-side routing
+
+<!-- --> 
+
 Blog posts are stored in `/posts` and styled using [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography) plugin, which can be further configured in tailwind.config.js.  
 
 It's minimally styled, fairly fully featured and based on the following:  
