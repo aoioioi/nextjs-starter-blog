@@ -7,7 +7,7 @@ author:
 tags: ['nature', 'lists']
 ---
 
-[Lorem ipsum](https:k-vega.com/) dolor sit amet consectetur adipisicing elite prehenderit accusamus, explicabo eligendi necessitatibus soluta. 
+[Lorem ipsum](https://k-vega.com/) dolor sit amet consectetur adipisicing elite prehenderit accusamus, explicabo eligendi necessitatibus soluta. 
 
 Items:
 1. Doloremque modi.
