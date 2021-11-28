@@ -9,5 +9,5 @@ It's minimally styled, fairly fully featured and based on the following:
 https://github.com/timlrx/tailwind-nextjs-starter-blog  
 https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 
-## 🎉 Demo  
+### 🎉 Demo  
 https://nextjs-starter-blog-five.vercel.app/  
