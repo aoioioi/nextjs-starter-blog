@@ -1,5 +1,5 @@
 # Starter Blog built with Next.js, Tailwind and Markdown
-Features: Static site generation, search, tags, client-side routing  
+Features: static site generation, search, tags, client-side routing  
 
 <!-- --> 
 
