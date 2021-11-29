@@ -14,7 +14,7 @@ function PostDetail({
         <h2 className="text-2xl mb-1">{title}</h2>
         <p className="text-gray-400 text-sm">{author.name} | {date}</p>
       </div>
-      <article className="prose leading-normal">
+      <article className="prose max-w-none leading-normal">
         <div
           dangerouslySetInnerHTML={{ __html: content }}
         />
