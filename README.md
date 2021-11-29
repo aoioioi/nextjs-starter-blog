@@ -13,7 +13,7 @@ https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 https://nextjs-starter-blog-five.vercel.app/  
 
 ## Getting Started
-`git clone https://github.com/aoioioi/nextjs-starter-blog.git`  
+`git clone https://github.com/aoioioi/nextjs-starter-blog.git my__nextjs_blog`  
 `npm i`  
 `npm run dev`  
 Deploy on Vercel
