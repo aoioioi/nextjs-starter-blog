@@ -14,6 +14,6 @@ https://nextjs-starter-blog-five.vercel.app/
 
 ## Getting Started
 `git clone https://github.com/aoioioi/nextjs-starter-blog.git`  
-`npm i`
+`npm i`  
 `npm run dev`  
 Deploy on Vercel
