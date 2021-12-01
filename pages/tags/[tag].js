@@ -1,5 +1,4 @@
-import { useRouter } from 'next/router';
-import { HiOutlineChevronLeft } from 'react-icons/hi';
+import BackButton from '../../components/BackButton';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Metadata from '../../components/Metadata';
@@ -57,7 +56,6 @@ export async function getStaticProps({ params }) {
 
 function Tagged({ allPosts, activeTag }) {
   const taggedPosts = allPosts;
-  const router = useRouter();
 
   return (
     <>
@@ -66,18 +64,12 @@ function Tagged({ allPosts, activeTag }) {
 
       <main className="max-w-[44rem] mx-auto mt-24">
         <div className="mx-6">
-          <button
-            type="button"
-            onClick={() => router.back()}
-            className="mb-10 text-sm flex items-center"
-          >
-            <HiOutlineChevronLeft className="text-lg mr-2" />{' '} Go back
-          </button>
+          <BackButton />
           <h2>Tagged: {titleCase(activeTag.split('-').join(' '))}</h2>
           <Posts posts={taggedPosts} />
         </div>
       </main>
-      
+
       <Footer />
     </>
   );
