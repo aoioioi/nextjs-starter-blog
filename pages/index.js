@@ -88,9 +88,8 @@ export default function Home({
               <Posts posts={initialDisplayPosts.slice(1)} />
             }
             {query &&
-              <>
                 <Posts posts={filteredPosts} />
-              </>}
+            }
 
             {/* Paginator */}
             {!query &&

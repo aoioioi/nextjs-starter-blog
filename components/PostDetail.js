@@ -14,17 +14,21 @@ function PostDetail({
   relatedPosts
 }) {
   return (
-    <div className="">
+    <>
+
       <BackButton />
+
       <div className="mb-6">
         <h2 className="text-2xl mb-1">{title}</h2>
         <p className="text-gray-400 text-sm">{author.name} | {date}</p>
       </div>
+
       <article className="prose max-w-none leading-normal">
         <div
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
+
       <div className="flex items-center mt-14 text-sm">
         <span className="mr-4 text-gray-400">Tags:</span>
         <div className="flex space-x-4 -mb-1">
@@ -35,6 +39,7 @@ function PostDetail({
           </Link>)}
         </div>
       </div>
+
       <div className="border-t border-gray-400 mt-8 flex justify-between space-x-14 text-sm">
         {nextPost ?
           <div>
@@ -54,6 +59,7 @@ function PostDetail({
             </Link>
           </div> : <div />
         }
+
         {previousPost &&
           <div>
             <h3 className="py-2 flex items-center justify-end">
@@ -73,6 +79,7 @@ function PostDetail({
           </div>
         }
       </div>
+
       {relatedPosts.length > 0 &&
         <div className="border-t border-gray-400 mt-8 text-sm space-y-1">
           <h3 className="py-2">Related</h3>
@@ -85,7 +92,8 @@ function PostDetail({
           ))}
         </div>
       }
-    </div>
+
+    </>
   );
 }
 

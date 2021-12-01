@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed w-full top-0 z-[100] py-4 text-gray-700 border-b border-gray-300 bg-white-300
+      className={`fixed w-full top-0 z-50 py-4 text-gray-700 border-b border-gray-300 bg-white-300
       ${scrollY > 30
           ? 'md:opacity-[85%] bg-white'
           : 'bg-white'} 

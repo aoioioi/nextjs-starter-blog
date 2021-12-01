@@ -14,8 +14,8 @@ function PostItem({
         <Link as={`/p/${slug}`} href="/p/[slug]">
           <img src={coverImage} alt="" className="cursor-pointer mb-2" />
         </Link>
-
       }
+      
       <Link as={`/p/${slug}`} href="/p/[slug]">{title}</Link>
       <p className="mt-2 mb-4 text-sm text-gray-400">{author.name} | {date}</p>
       <p className="max-w-[44rem]">{excerpt}</p>

@@ -7,9 +7,9 @@ function Pagination({ currentPage, totalPages }) {
 
   return (
     <div className="mt-6 flex justify-between items-center">
+      
       {!prevPage ? (
         <button rel="previous" className="text-gray-300">
-
         </button>
       ) : (
         <Link href={currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`}>
@@ -18,12 +18,13 @@ function Pagination({ currentPage, totalPages }) {
           </button>
         </Link>
       )}
+
       <span>
         {currentPage} of {totalPages}
       </span>
+
       {!nextPage ? (
         <button rel="next" className="text-gray-300">
-
         </button>
       ) : (
         <Link href={`/page/${currentPage + 1}`}>
@@ -32,6 +33,7 @@ function Pagination({ currentPage, totalPages }) {
           </button>
         </Link>
       )}
+
     </div>
   );
 }

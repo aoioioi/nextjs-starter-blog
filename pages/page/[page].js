@@ -73,6 +73,7 @@ function Page({ allPosts, initialDisplayPosts, pagination }) {
     <>
       <Metadata title="Next.js Blog" />
       <Header />
+      
       <main className="xl:max-w-screen-xl mx-auto mt-24">
         <div className="max-w-[55rem] mx-auto">
           <div className="mx-6">
@@ -105,6 +106,7 @@ function Page({ allPosts, initialDisplayPosts, pagination }) {
           </div>
         </div>
       </main>
+
       <Footer />
     </>
   );
