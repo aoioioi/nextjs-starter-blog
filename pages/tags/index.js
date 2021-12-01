@@ -41,7 +41,7 @@ function index({ tagCounts }) {
           <h2 className="text-2xl mb-8">All Tags</h2>
           <div className="grid grid-cols-2 gap-y-3">
             {sorted.map(tag => (
-              <div className="w-full flex">
+              <div className="w-full flex" key={tag}>
                 <Link href="/tags/[tag]" as={`/tags/${kebabCase(tag)}`}>
                   <a className="hover:underline w-full">
                     {titleCase(tag)} ({tagCounts[tag]})

@@ -1,6 +1,3 @@
-import { useRouter } from 'next/router';
-import { HiOutlineChevronLeft } from 'react-icons/hi';
-
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Metadata from '../../components/Metadata';
@@ -24,6 +21,15 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'tags'
+  ]);
+
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -36,19 +42,36 @@ export async function getStaticProps({ params }) {
   ]);
   const content = await markdownToHtml(post.content || '');
 
+  const postIndex = allPosts.findIndex((post) => post.slug === params.slug);
+  const previousPost = allPosts[postIndex + 1] || null;
+  const nextPost = allPosts[postIndex - 1] || null;
+
+  let relatedPosts = [];
+  const mainTag = post.tags[0];
+  const secondaryTag = post.tags[1] || null;
+
+  allPosts.map(p => {
+    p.tags.forEach(postTag => {
+      if (p.slug !== post.slug && ((postTag === mainTag || postTag === secondaryTag) && !relatedPosts.includes(p))) {
+        relatedPosts.push(p);
+      }
+    });
+  });
+
   return {
     props: {
       post: {
         ...post,
         content,
+        previousPost,
+        nextPost,
+        relatedPosts: relatedPosts.reverse().slice(0, 2)
       },
     },
   };
 }
 
 function Post({ post }) {
-  const router = useRouter();
-
   return (
     <>
       <Metadata title={post.title} />
@@ -56,19 +79,15 @@ function Post({ post }) {
 
       <main className="max-w-[44rem] mx-auto mt-24">
         <div className="mx-6">
-          <button
-            type="button"
-            onClick={() => router.back()}
-            className="mb-10 text-sm flex items-center"
-          >
-            <HiOutlineChevronLeft className="text-lg mr-2"/>{' '} Go back
-          </button>
           <PostDetail
             title={post.title}
             author={post.author}
             date={post.date}
             content={post.content}
             tags={post.tags}
+            previousPost={post.previousPost}
+            nextPost={post.nextPost}
+            relatedPosts={post.relatedPosts}
           />
         </div>
       </main>
