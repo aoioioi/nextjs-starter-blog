@@ -31,12 +31,18 @@ function PostDetail({
 
       <div className="flex items-center mt-14 text-sm">
         <span className="mr-4 text-gray-400">Tags:</span>
-        <div className="flex space-x-4 -mb-1">
-          {tags.map(tag => <Link key={tag} href="/tags/[tag]" as={`/tags/${kebabCase(tag)}`}>
-            <div className="border cursor-pointer rounded-full px-3 pt-1 pb-2">
-              {tag}
-            </div>
-          </Link>)}
+        <div className="flex space-x-4">
+          {tags.map(tag =>
+            <Link
+              key={tag}
+              href="/tags/[tag]"
+              as={`/tags/${kebabCase(tag)}`}
+            >
+              <div className="border cursor-pointer rounded-full px-3 pt-1 pb-2">
+                {tag}
+              </div>
+            </Link>
+          )}
         </div>
       </div>
 

@@ -53,55 +53,53 @@ export default function Home({
       <Metadata title="Next.js Blog" />
       <Header />
 
-      <main className="xl:max-w-screen-xl mx-auto mt-24">
-        <div className="max-w-[55rem] mx-auto">
-          <div className="mx-6">
-            <div className="flex items-center p-3 rounded-lg max-w-[20rem] border mb-6 bg-white">
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value.toLowerCase())}
-                placeholder="Search..."
-                className="outline-none w-full rounded-md"
-              />
-              <HiOutlineX
-                className="text-xl text-gray-400 cursor-pointer -mr-1" onClick={(e) => setQuery('')}
-              />
-            </div>
-
-            {(HeroPost && !query) &&
-              <HeroPost
-                title={heroPost.title}
-                date={heroPost.date}
-                author={heroPost.author}
-                slug={heroPost.slug}
-                excerpt={heroPost.excerpt}
-                coverImage={heroPost.coverImage}
-              />
-            }
-
-            {/* Posts list */}
-            {(query && filteredPosts.length === 0) &&
-              <p className="text-2xl mt-5 mb-64">No posts found!</p>
-            }
-            {!query &&
-              <Posts posts={initialDisplayPosts.slice(1)} />
-            }
-            {query &&
-                <Posts posts={filteredPosts} />
-            }
-
-            {/* Paginator */}
-            {!query &&
-              <Pagination
-                currentPage={pagination.currentPage}
-                totalPages={pagination.totalPages}
-              />
-            }
+      <main className="max-w-[55rem] mx-auto mt-24">
+        <div className="mx-6">
+          <div className="flex items-center p-3 rounded-lg max-w-[20rem] border mb-6 bg-white">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value.toLowerCase())}
+              placeholder="Search..."
+              className="outline-none w-full rounded-md"
+            />
+            <HiOutlineX
+              className="text-xl text-gray-400 cursor-pointer -mr-1" onClick={(e) => setQuery('')}
+            />
           </div>
+
+          {(HeroPost && !query) &&
+            <HeroPost
+              title={heroPost.title}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+              coverImage={heroPost.coverImage}
+            />
+          }
+
+          {/* Posts list */}
+          {(query && filteredPosts.length === 0) &&
+            <p className="text-2xl mt-5 mb-64">No posts found!</p>
+          }
+          {!query &&
+            <Posts posts={initialDisplayPosts.slice(1)} />
+          }
+          {query &&
+            <Posts posts={filteredPosts} />
+          }
+
+          {/* Paginator */}
+          {!query &&
+            <Pagination
+              currentPage={pagination.currentPage}
+              totalPages={pagination.totalPages}
+            />
+          }
         </div>
       </main>
-      
+
       <Footer />
     </>
   );
