@@ -77,7 +77,7 @@ function Post({ post }) {
       <Metadata title={post.title} />
       <Header />
 
-      <main className="max-w-[44rem] mx-auto mt-24">
+      <main className="max-w-[65rem] mx-auto mt-24">
         <div className="mx-6">
           <PostDetail
             title={post.title}
