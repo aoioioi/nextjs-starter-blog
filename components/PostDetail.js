@@ -86,18 +86,17 @@ function PostDetail({
           }
         </div>
 
-        {relatedPosts.length > 0 &&
-          <div className="border-t border-gray-400 mt-8 text-sm space-y-1 lg:hidden">
-            <h3 className="py-2">Related</h3>
-            {relatedPosts.map(related => (
-              <Link key={related.slug} href={`/p/${related.slug}`}>
-                <a className="block hover:underline">
-                  {related.title}
-                </a>
-              </Link>
-            ))}
-          </div>
-        }
+        <div className="border-t border-gray-400 mt-8 text-sm space-y-1 lg:hidden">
+          <h3 className="py-2">Related</h3>
+          {relatedPosts.length === 0 && 'No related posts'}
+          {relatedPosts.length > 0 && relatedPosts.map(related => (
+            <Link key={related.slug} href={`/p/${related.slug}`}>
+              <a className="block hover:underline">
+                {related.title}
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="text-sm hidden mt-32 lg:block space-y-1 col-span-1">
@@ -118,6 +117,7 @@ function PostDetail({
               </a>
             </Link>
           </div>}
+
         {previousPost &&
           <div className="">
             <h3 className="py-2">
