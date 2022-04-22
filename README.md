@@ -10,7 +10,7 @@ https://github.com/timlrx/tailwind-nextjs-starter-blog
 https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 
 ## 🎉🎉🎉 Demo  
-https://nextjs-starter-blog-five.vercel.app/  
+https://todaysmusings.vercel.app/  
 
 ## Getting Started
 1. `git clone https://github.com/aoioioi/nextjs-starter-blog.git my_nextjs_blog`  
