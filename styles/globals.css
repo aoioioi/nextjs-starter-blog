@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Mulish Regular";
+    src: url("/fonts/Mulish-Regular.woff") format("woff");
+  }
+
+  body {
+    font-family: "Mulish Regular", sans-serif;
+    font-size: 15px;
+  }
+}
