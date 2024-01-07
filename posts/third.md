@@ -1,7 +1,7 @@
 ---
 title: "Third Next.js Blog Post"
 excerpt: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates, veniam, quasi fugiat aliquid quis a aperiam, sint placeat qui labore!"
-date: "2021-11-15"
+date: "15 Nov 23"
 author:
   name: Admin
 tags: ['long form', 'quotes']

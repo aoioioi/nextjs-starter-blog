@@ -1,7 +1,7 @@
 ---
 title: "First Next.js Blog Post"
 excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus, explicabo eligendi necessitatibus soluta!"
-date: "2021-11-08"
+date: "11 Aug 23"
 author:
   name: Admin
 coverImage: "/images/johannes-mandle-unsplash.jpg"

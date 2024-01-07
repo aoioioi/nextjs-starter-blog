@@ -1,7 +1,7 @@
 ---
 title: "Fourth Next.js Blog Post"
 excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus, explicabo eligendi necessitatibus soluta!"
-date: "2021-11-22"
+date: "22 Nov 23"
 author:
   name: Admin
 coverImage: ""
