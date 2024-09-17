@@ -1,7 +1,7 @@
 ---
 title: "Second Next.js Blog Post"
 excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elite prehenderit accusamus, explicabo eligendi necessitatibus soluta."
-date: "12 Nov 23"
+date: "12 Nov 2023"
 author:
   name: Admin
 tags: ['nature', 'lists']
